@@ -1,0 +1,37 @@
+.follow-me {
+    list-style: none;
+    margin: 0 0 -8px;
+    overflow: hidden;
+    padding: 0;
+  }
+  .follow-me li {
+    float: left;
+    margin: 0 8px 8px 0;
+    padding: 0;
+  }
+  .follow-me li a::before {
+    border-style: solid;
+    border-width: 1px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    color: #fff;
+    display: inline-block;
+    font-family: FontAwesome;
+    font-size: 16px;
+    height: 42px; /* Button height */
+    line-height: 42px; /* Button height */
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    text-align: center;
+    width: 42px; /* Button width */
+  }
+  
+  .follow-me li a[href*="github.com/seamcarving"]::before         { border-color: #181717; background-color: #181717; content: "\f09b"; }
+  .follow-me li a[href*="twitch.tv/se4mless"]::before          { border-color: #6441a5; background-color: #6441a5; content: "\f1e8"; }
+  .follow-me li a[href*="twitter.com/seamcarving"]::before        { border-color: #55acee; background-color: #55acee; content: "\f099"; }
+  .follow-me li a:hover::before {
+    background-color: #fff;
+  }
+  .follow-me li a[href*="github.com/seamcarving"]:hover::before         { color: #181717; }
+  .follow-me li a[href*="twitch.tv/se4mless"]:hover::before          { color: #6441a5; }
+  .follow-me li a[href*="twitter.com/seamcarving"]:hover::before        { color: #55acee; }

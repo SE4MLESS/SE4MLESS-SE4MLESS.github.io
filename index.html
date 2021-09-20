@@ -2,7 +2,9 @@
 <html lang="en">
 
 <head>
-  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="portfolio.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -10,7 +12,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
 </head>
 
-<body>
+<body style="background: #edf2f7;">
+  <!--
   <header>
     <h1 class="text-4xl text-black-600 text-left font-mono">Simple My Portfolio</h1>
     <div class="avatar">
@@ -19,102 +22,156 @@
       </a>
     </div>
   </header>
-
+-->
+  <header></header>
   <article>
-    <section>
-      <h2 class="text-3xl text-red-600 text-left font-mono">Profile</h2>
-      <table>
-        <tr>
-          <th>Name</th>
-          <td>Kitamura Kengo</td>
-        </tr>
-        <tr>
-          <th>Birth Date</th>
-          <td>1995/02/11</td>
-        </tr>
-        <tr>
-          <th>Old</th>
-          <td>26</td>
-        </tr>
-        <tr>
-          <th>Gender</th>
-          <td>Man</td>
-        </tr>
-        <tr>
-          <th>Job</th>
-          <td>Engineer</td>
-        </tr>
-        <tr>
-          <th>Education</th>
-          <td><a href="http://www.oit.ac.jp/is/graduate/index.html">OIT(Osaka Institute of Technology)</a></td>
-        </tr>
-        <tr>
-          <th>Mail</th>
-          <td>xyz@gmail.com</a></td>
-        </tr>
-      </table>
-      </div>
-      <hr>
-      </hr>
-    </section>
-    <br>
-    <section>
-      <h2 class="text-3xl text-red-600 text-left font-mono">About me</h2>
-      大学院では情報科学を専攻していました。画像処理や物体検出、AIの技術に興味を持って取り組んでいました。
-      SE就職後はデータのクレンジングやAIを用いた異常検知のPOC等に携わりました。技術の連携としてQiitaの投稿も始めています。少しでも記事を読んだ人に役立つ記事を目指しています。
-      趣味はPCの自作とFPS(一人称シューティング)です。特に最近はApexLegendsをプレイしていて2000時間以上は練習しています。何事にも一度興味を持つとモチベーションを維持できます。
-    </section>
-    <br>
-    <section>
-      <h2 class="text-3xl text-red-600 text-left font-mono">SkillChart</h2>
-      参考程度
-      <canvas id="skillChart" width="400" height="300">
-      </canvas>
-    </section>
-    <br>
-    <section>
-      <h2 class="text-3xl text-red-600 text-left font-mono">Qiita</h2>
-      <h3>MyPage</h3>
-      <p>
-        <iframe src="https://hatenablog-parts.com/embed?url=https://qiita.com/seamcarving/"
-          title="@seamcarvingのマイページ - Qiita" class="embed-card embed-webcard" scrolling="no" frameborder="0"
-          style="display: block; width: 100%; height: 155px; max-width: 600px; margin: 10px 0px;">
-        </iframe>
-      </p>
+    <div class="card w-96 mx-auto bg-white shadow-xl hover:shadow">
+      <section>
+        <div class="w-1/4 text-left py-1 px-4 text-left font-normal text-lg bg-green-600 text-white">Portfolio
+        </div>
+        <img class="w-48 mx-auto rounded-full -mt-30 border-8 border-white" src="source/face.jpg" alt="">
+        <div class="text-center mt-2 text-3xl font-medium">Kitamura Kengo</div>
+        <div class="px-6 text-center mt-2 font-light text-sm">
+        </div>
+        <div class="flex flex-wrap justify-center gap-2">
+          <ul class="follow-me">
+            <li><a href="https://twitter.com/seamcarving"></a></li>
+          </ul>
+          <ul class="follow-me">
+            <li><a href="https://github.com/seamcarving"></a></li>
+          </ul>
+          <ul class="follow-me">
+            <li><a href="https://www.twitch.tv/se4mless"></a></li>
+          </ul>
+        </div>
+      </section>
+      <br>
+      <section>
+        <div class="w-2/4 text-left py-1 px-4 text-left font-normal text-lg bg-green-600 text-white">PROFILE
+        </div>
+        <div class="shadow overflow-hidden rounded border-b border-gray-200">
+          <table class="min-w-full bg-white">
+            <!--
+            <thead class="bg-gray-800 text-white">
+              <tr>
+                <th class="w-1/3 text-left py-2 px-4 uppercase font-semibold text-sm">Profile</th>
+                <th class="w-1/3 text-left py-2 px-4 uppercase font-semibold text-sm">Detail</th>
+              </tr>
+            </thead>
+          -->
+            <tr>
+              <th class="w-1/3 text-left py-1 px-4">Name</th>
+              <td class="w-1/3 text-left py-1 px-4">Kitamura Kengo</td>
+            </tr>
+            <tr class="bg-gray-100">
+              <th class="w-1/3 text-left py-1 px-4">Birth Date</th>
+              <td class="w-1/3 text-left py-1 px-4">1995/02/11</td>
+            </tr>
+            <tr>
+              <th class="w-1/3 text-left py-1 px-4">Old</th>
+              <td class="w-1/3 text-left py-1 px-4">26</td>
+            </tr>
+            <tr class="bg-gray-100">
+              <th class="w-1/3 text-left py-1 px-4">Gender</th>
+              <td class="w-1/3 text-left py-1 px-4">Man</td>
+            </tr>
+            <tr>
+              <th class="w-1/3 text-left py-1 px-4">Job</th>
+              <td class="w-1/3 text-left py-1 px-4">Engineer</td>
+            </tr>
+            <tr class="bg-gray-100">
+              <th class="w-1/3 text-left py-1 px-4">Education</th>
+              <td class="w-1/3 text-left py-1 px-4 text-decoration: underline">
+                <a href="http://www.oit.ac.jp/is/graduate/index.html">OIT(大阪工業大学)</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </section>
+      <br>
 
-      タグごと投稿記事
-      <h3>#Python #Keras #機械学習</h3>
-      <p>
-        <iframe src="https://hatenablog-parts.com/embed?url=https://qiita.com/seamcarving/items/87384ac0dab2bc2c4c15"
-          title="[初心者向け] Python MNISTのサンプルコードを自作データセットで動かすためのload_data自作" class="embed-card embed-webcard"
-          scrolling="no" frameborder="0"
-          style="display: block; width: 100%; height: 155px; max-width: 600px; margin: 10px 0px;">
+      <section>
+        <div class="w-3/4 text-left py-1 px-4 text-left font-normal text-lg bg-green-600 text-white">About me
+        </div>
+        <div class="bg-gray-100 py-1 px-4 font-sans">
+          大学院では情報科学を専攻していました。画像処理や物体検出、AIの技術に興味を持って取り組んでいました。
+          SE就職後はデータのクレンジングやAIを用いた異常検知のPOC等に携わりました。技術の連携としてQiitaの投稿も始めています。少しでも記事を読んだ人に役立つ記事を目指しています。
+          趣味はPCの自作とFPS(一人称シューティング)です。特に最近はApexLegendsをプレイしていて2000時間以上は練習しています。何事にも一度興味を持つとモチベーションを維持できます。
+        </div>
+      </section>
+      <br>
+      <section>
+        <div class="w-4/4 text-left py-1 px-4 text-left font-normal text-lg bg-green-600 text-white">Skill Chart
+        </div>
+        <canvas id="skillChart" style="position: relative; height:150; width:150">
+        </canvas>
+      </section>
+
+      <br>
+
+      <section>
+        <div class="w-1/4 text-left py-1 px-4 text-left font-normal text-lg bg-green-600 text-white">Qiita
+        </div>
+
+        <p>
+          <iframe src="https://hatenablog-parts.com/embed?url=https://qiita.com/seamcarving/"
+            title="@seamcarvingのマイページ - Qiita" class="embed-card embed-webcard" scrolling="no" frameborder="0"
+            style="display: block; width: 100%; height: 155px; max-width: 600px; margin: 10px 0px;">
+          </iframe>
+        </p>
+        #タグ毎の投稿記事<br>
+        機械学習データセット<br>
+        #Python #Keras #機械学習
+        <p>
+          <iframe src="https://hatenablog-parts.com/embed?url=https://qiita.com/seamcarving/items/87384ac0dab2bc2c4c15"
+            title="[初心者向け] Python MNISTのサンプルコードを自作データセットで動かすためのload_data自作" class="embed-card embed-webcard"
+            scrolling="no" frameborder="0"
+            style="display: block; width: 100%; height: 155px; max-width: 600px; margin: 10px 0px;">
+          </iframe>
+        </p>
+
+        </p>
+        画像処理による工場のアナログメータの数値測定<br>
+        #C++ #画像処理 #自動化
+        <p>
+          <iframe src="https://hatenablog-parts.com/embed?url=https://qiita.com/seamcarving/items/f20eed42d4d778db1fa7"
+            title="画像処理とC++を用いたアナログメーターの自動読み取り　アルゴリズム実装" class="embed-card embed-webcard" scrolling="no" frameborder="0"
+            style="display: block; width: 100%; height: 155px; max-width: 600px; margin: 10px 0px;">
+          </iframe>
+        </p>
+      </section>
+      <br>
+      <section>
+        <div class="w-2/4 text-left py-1 px-4 text-left font-normal text-lg bg-red-800 text-white">ApexLegends
+        </div>
+        Battle record
+        <iframe title="Apex" src="https://apex.tracker.gg/apex/profile/origin/seamcarving/overview" width="384"
+          height="300">
         </iframe>
-      </p>
-      <h3>#C++ #画像処理 #自動化</h3>
-      <p>
-        <iframe src="https://hatenablog-parts.com/embed?url=https://qiita.com/seamcarving/items/f20eed42d4d778db1fa7"
-          title="画像処理とC++を用いたアナログメーターの自動読み取り　アルゴリズム実装" class="embed-card embed-webcard" scrolling="no" frameborder="0"
-          style="display: block; width: 100%; height: 155px; max-width: 600px; margin: 10px 0px;">
-        </iframe>
-      </p>
-    </section>
-    <br>
-    <section>
-      <h2 class="text-3xl text-red-600 text-left font-mono">ApexLegends</h2>
-      <h3>Battle record</h3>
-      <iframe title="Apex" src="https://apex.tracker.gg/apex/profile/origin/seamcarving/overview
-    " width="600" height="300"></iframe>
-    </section>
+      </section>
+
+      <footer>
+        <hr class="mt-8">
+        <div class="flex p-4">
+          <div class="w-1/2 text-center">
+            <span class="font-bold">Mail</span>
+          </div>
+          <div class="w-0 border border-gray-300">
+          </div>
+          <div class="w-1/2 text-center">
+            <span class="font-bold">se4mless@gmail.com</span>
+          </div>
+        </div>
+      </footer>
+    </div>
   </article>
 
   <!-- サブ的なコンテンツ部分 サイドバーなど -->
   <aside>
     <section></section>
   </aside>
-  <footer>
-  </footer>
 
+  <!-- レーダーチャートscript -->
   <script>
     var ctx = document.getElementById("skillChart");
     var skillChart = new Chart(ctx, {
@@ -125,7 +182,7 @@
         //データセット
         datasets: [
           {
-            label: "SkillChart",
+            label: "Skill",
             //背景色
             backgroundColor: "rgba(100,200,200,0.5)",
             //枠線の色
@@ -146,17 +203,29 @@
         ]
       },
       options: {
+        legend: {
+          labels: {
+            fontColor: 'black',
+            fontSize: 14
+          }
+        },
         responsive: true,
         scale: {
+          pointLabels: {
+            fontSize: 14,
+            fontColor: "blue"
+          },
           ticks: {
             beginAtZero: true,
             min: 0,
             max: 5,
+            fontSize: 10,
           }
         }
       }
     });
   </script>
+
 </body>
 
 </html>
