@@ -11,28 +11,50 @@
   <title>Portfolio@Seamcarving</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
 </head>
-
 <body style="background: #edf2f7;">
-  <!--
+  
   <header>
-    <h1 class="text-4xl text-black-600 text-left font-mono">Simple My Portfolio</h1>
-    <div class="avatar">
-      <a href="https://seamcarving.github.io/">
-        <img src="source/face.jpg" alt="Face" width="300" height="300" />
-      </a>
-    </div>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+<div class="flex justify-center">
+<div x-data="{ dropdownOpen: true }" class="relative my-32">
+  <button @click="dropdownOpen = !dropdownOpen" class="relative z-10 block rounded-md bg-white p-2 focus:outline-none">
+    <svg class="h-5 w-5 text-gray-800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+      <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+    </svg>
+  </button>
+
+  <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+
+  <div x-show="dropdownOpen" class="absolute right-0 mt-2 py-1 w-28 bg-white rounded-md shadow-xl z-20">
+    <a href="#profile" class="block px-4 py-1 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
+      profile
+    </a>
+    <a href="#aboutme" class="block px-4 py-1 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
+      About me
+    </a>
+    <a href="#skill" class="block px-4 py-1 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
+      skillChart
+    </a>
+    <a href="#qiita" class="block px-4 py-1 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
+      Qiita
+    </a>
+  </div>
+</div>
+</div>
   </header>
--->
-  <header></header>
+  
   <article>
-    <div class="card w-96 mx-auto bg-white shadow-xl hover:shadow">
+    <div class="card w-96 mx-auto bg-white shadow-2xl hover:shadow">
       <section>
-        <div class="w-1/4 text-left py-1 px-4 text-left font-normal text-lg bg-green-600 text-white">Portfolio
+        <!--
+        <div class="w-1/4 text-left py-1 px-4 text-left font-normal text-lg bg-purple-500 text-white">Portfolio
         </div>
-        <img class="w-48 mx-auto rounded-full -mt-30 border-8 border-white" src="source/face.jpg" alt="">
+-->
+        <a href="https://seamcarving.github.io/">
+        <img class="w-48 mx-auto py-1 rounded-full -mt-30 border-8 border-white transform hover:scale-110" src="source/face.jpg" alt="facepic">
+        </a>
         <div class="text-center mt-2 text-3xl font-medium">Kitamura Kengo</div>
-        <div class="px-6 text-center mt-2 font-light text-sm">
-        </div>
+        <div class="text-center mt-2 font-light text-sm py-1">@seamcarving</div>
         <div class="flex flex-wrap justify-center gap-2">
           <ul class="follow-me">
             <li><a href="https://twitter.com/seamcarving"></a></li>
@@ -41,24 +63,18 @@
             <li><a href="https://github.com/seamcarving"></a></li>
           </ul>
           <ul class="follow-me">
-            <li><a href="https://www.twitch.tv/se4mless"></a></li>
+            <li><a href="https://www.twitch.tv/seamcarving"></a></li>
+          </ul>
           </ul>
         </div>
       </section>
       <br>
       <section>
-        <div class="w-2/4 text-left py-1 px-4 text-left font-normal text-lg bg-green-600 text-white">PROFILE
+        <div class="w-2/4 text-right py-1 px-4 text-left font-normal text-lg bg-purple-500 text-white"><a id="profile">PROFILE</a>
         </div>
-        <div class="shadow overflow-hidden rounded border-b border-gray-200">
+
+        <div class="shadow overflow-hidden rounded border-b border-gray-200 px-2">
           <table class="min-w-full bg-white">
-            <!--
-            <thead class="bg-gray-800 text-white">
-              <tr>
-                <th class="w-1/3 text-left py-2 px-4 uppercase font-semibold text-sm">Profile</th>
-                <th class="w-1/3 text-left py-2 px-4 uppercase font-semibold text-sm">Detail</th>
-              </tr>
-            </thead>
-          -->
             <tr>
               <th class="w-1/3 text-left py-1 px-4">Name</th>
               <td class="w-1/3 text-left py-1 px-4">Kitamura Kengo</td>
@@ -91,38 +107,41 @@
       <br>
 
       <section>
-        <div class="w-3/4 text-left py-1 px-4 text-left font-normal text-lg bg-green-600 text-white">About me
+        <div class="w-3/4 text-right py-1 px-4 text-left font-normal text-lg bg-purple-500 text-white"><a id="aboutme">About me</a>
         </div>
-        <div class="bg-gray-100 py-1 px-4 font-sans">
-          大学院では情報科学を専攻していました。画像処理や物体検出、AIの技術に興味を持って取り組んでいました。
-          SE就職後はデータのクレンジングやAIを用いた異常検知のPOC等に携わりました。技術の連携としてQiitaの投稿も始めています。少しでも記事を読んだ人に役立つ記事を目指しています。
-          趣味はPCの自作とFPS(一人称シューティング)です。特に最近はApexLegendsをプレイしていて2000時間以上は練習しています。何事にも一度興味を持つとモチベーションを維持できます。
+        <div class="overflow-auto h-48 bg-blueGray py-1 px-4 font-sans">
+          <strong>大学院</strong>では情報科学を専攻していました。<em><b>画像処理や物体検出、AIの技術に興味を持って取り組んでいました。</b></em>
+          <strong>SE就職後</strong>はデータのクレンジングやAIを用いた異常検知のPOC等に携わりました。技術の連携として<font size="4"><strong>Qiita</font>
+          </strong>の投稿も始めています。少しでも役立つ記事を目指しています。
+          <strong>趣味</strong>はPCの自作とFPS(一人称シューティング)です。特に最近は<font color="#ff0000">ApexLegends</font>
+          をプレイしていて<strike>2000時間以上</strike>は練習しています。何事にも一度興味を持つとモチベーションを維持できます。
         </div>
       </section>
       <br>
       <section>
-        <div class="w-4/4 text-left py-1 px-4 text-left font-normal text-lg bg-green-600 text-white">Skill Chart
+        <div class=" w-4/4 text-right py-1 px-4 text-left font-normal text-lg bg-purple-500 text-white"><a id="skill">Skill Chart</a>
         </div>
+        <div class="transform hover:scale-120">
         <canvas id="skillChart" style="position: relative; height:150; width:150">
         </canvas>
+        </div>
       </section>
-
       <br>
-
       <section>
-        <div class="w-1/4 text-left py-1 px-4 text-left font-normal text-lg bg-green-600 text-white">Qiita
+        <div class="w-1/4 text-left py-1 px-4 text-left font-normal text-lg bg-green-600 text-white"><a id="qiita">Qiita</a>
         </div>
 
-        <p>
+        <p class="py-1 px-3">
           <iframe src="https://hatenablog-parts.com/embed?url=https://qiita.com/seamcarving/"
             title="@seamcarvingのマイページ - Qiita" class="embed-card embed-webcard" scrolling="no" frameborder="0"
             style="display: block; width: 100%; height: 155px; max-width: 600px; margin: 10px 0px;">
           </iframe>
         </p>
-        #タグ毎の投稿記事<br>
-        機械学習データセット<br>
-        #Python #Keras #機械学習
-        <p>
+        <div class="container mx-auto px-4">
+          #タグ毎の投稿記事<br>機械学習データセット<br>
+          #Python #Keras #機械学習
+        </div>
+        <p class="py-1 px-3">
           <iframe src="https://hatenablog-parts.com/embed?url=https://qiita.com/seamcarving/items/87384ac0dab2bc2c4c15"
             title="[初心者向け] Python MNISTのサンプルコードを自作データセットで動かすためのload_data自作" class="embed-card embed-webcard"
             scrolling="no" frameborder="0"
@@ -130,10 +149,12 @@
           </iframe>
         </p>
 
-        </p>
-        画像処理による工場のアナログメータの数値測定<br>
-        #C++ #画像処理 #自動化
-        <p>
+        </p class="py-1 px-3">
+        <div class="container mx-auto px-4">
+          画像処理による工場のアナログメータの数値測定<br>
+          #C++ #画像処理 #自動化
+        </div>
+        <p class="py-1 px-3">
           <iframe src="https://hatenablog-parts.com/embed?url=https://qiita.com/seamcarving/items/f20eed42d4d778db1fa7"
             title="画像処理とC++を用いたアナログメーターの自動読み取り　アルゴリズム実装" class="embed-card embed-webcard" scrolling="no" frameborder="0"
             style="display: block; width: 100%; height: 155px; max-width: 600px; margin: 10px 0px;">
@@ -144,9 +165,11 @@
       <section>
         <div class="w-2/4 text-left py-1 px-4 text-left font-normal text-lg bg-red-800 text-white">ApexLegends
         </div>
+        <div class="container mx-auto px-4">
         Battle record
+        </div>
         <iframe title="Apex" src="https://apex.tracker.gg/apex/profile/origin/seamcarving/overview" width="384"
-          height="300">
+          height="400">
         </iframe>
       </section>
 
@@ -159,7 +182,7 @@
           <div class="w-0 border border-gray-300">
           </div>
           <div class="w-1/2 text-center">
-            <span class="font-bold">se4mless@gmail.com</span>
+            <span class="font-bold">-</span>
           </div>
         </div>
       </footer>
@@ -168,7 +191,9 @@
 
   <!-- サブ的なコンテンツ部分 サイドバーなど -->
   <aside>
-    <section></section>
+    https://ci.nii.ac.jp/naid/130007789518
+
+    https://www.bookpark.ne.jp/cm/ieej/detail/IEEJ-ZT183037-PDF/
   </aside>
 
   <!-- レーダーチャートscript -->
