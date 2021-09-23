@@ -27,11 +27,12 @@
   }
   
   .follow-me li a[href*="github.com/seamcarving"]::before         { border-color: #181717; background-color: #181717; content: "\f09b"; }
-  .follow-me li a[href*="twitch.tv/se4mless"]::before          { border-color: #6441a5; background-color: #6441a5; content: "\f1e8"; }
+  .follow-me li a[href*="twitch.tv/seamcarving"]::before          { border-color: #6441a5; background-color: #6441a5; content: "\f1e8"; }
   .follow-me li a[href*="twitter.com/seamcarving"]::before        { border-color: #55acee; background-color: #55acee; content: "\f099"; }
+
   .follow-me li a:hover::before {
     background-color: #fff;
   }
   .follow-me li a[href*="github.com/seamcarving"]:hover::before         { color: #181717; }
-  .follow-me li a[href*="twitch.tv/se4mless"]:hover::before          { color: #6441a5; }
+  .follow-me li a[href*="twitch.tv/seamcarving"]:hover::before          { color: #6441a5; }
   .follow-me li a[href*="twitter.com/seamcarving"]:hover::before        { color: #55acee; }
