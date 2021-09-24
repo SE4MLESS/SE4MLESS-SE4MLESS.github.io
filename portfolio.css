@@ -1,38 +1,94 @@
 .follow-me {
-    list-style: none;
-    margin: 0 0 -8px;
-    overflow: hidden;
-    padding: 0;
-  }
-  .follow-me li {
-    float: left;
-    margin: 0 8px 8px 0;
-    padding: 0;
-  }
-  .follow-me li a::before {
-    border-style: solid;
-    border-width: 1px;
-    -webkit-border-radius: 2px;
-    border-radius: 2px;
-    color: #fff;
-    display: inline-block;
-    font-family: FontAwesome;
-    font-size: 16px;
-    height: 42px; /* Button height */
-    line-height: 42px; /* Button height */
-    -webkit-transition: all .3s ease;
-    transition: all .3s ease;
-    text-align: center;
-    width: 42px; /* Button width */
-  }
-  
-  .follow-me li a[href*="github.com/seamcarving"]::before         { border-color: #181717; background-color: #181717; content: "\f09b"; }
-  .follow-me li a[href*="twitch.tv/seamcarving"]::before          { border-color: #6441a5; background-color: #6441a5; content: "\f1e8"; }
-  .follow-me li a[href*="twitter.com/seamcarving"]::before        { border-color: #55acee; background-color: #55acee; content: "\f099"; }
+  list-style: none;
+  margin: 0 0 -8px;
+  overflow: hidden;
+  padding: 0;
+}
+.follow-me li {
+  float: left;
+  margin: 0 8px 8px 0;
+  padding: 0;
+}
+.follow-me li a::before {
+  border-style: solid;
+  border-width: 1px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  color: #fff;
+  display: inline-block;
+  font-family: FontAwesome;
+  font-size: 16px;
+  height: 42px; /* Button height */
+  line-height: 42px; /* Button height */
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  text-align: center;
+  width: 42px; /* Button width */
+}
 
-  .follow-me li a:hover::before {
-    background-color: #fff;
-  }
-  .follow-me li a[href*="github.com/seamcarving"]:hover::before         { color: #181717; }
-  .follow-me li a[href*="twitch.tv/seamcarving"]:hover::before          { color: #6441a5; }
-  .follow-me li a[href*="twitter.com/seamcarving"]:hover::before        { color: #55acee; }
+.follow-me li a[href*="github.com/seamcarving"]::before {
+  border-color: #181717;
+  background-color: #181717;
+  content: "\f09b";
+}
+.follow-me li a[href*="twitch.tv/seamcarving"]::before {
+  border-color: #6441a5;
+  background-color: #6441a5;
+  content: "\f1e8";
+}
+.follow-me li a[href*="twitter.com/seamcarving"]::before {
+  border-color: #55acee;
+  background-color: #55acee;
+  content: "\f099";
+}
+
+.follow-me li a:hover::before {
+  background-color: #fff;
+}
+.follow-me li a[href*="github.com/seamcarving"]:hover::before {
+  color: #181717;
+}
+.follow-me li a[href*="twitch.tv/seamcarving"]:hover::before {
+  color: #6441a5;
+}
+.follow-me li a[href*="twitter.com/seamcarving"]:hover::before {
+  color: #55acee;
+}
+
+#page_top {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  background: #919090;
+  opacity: 0.6;
+}
+#page_top a {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+}
+#page_top a::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f0d8";
+  font-size: 25px;
+  color: #fff;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
+
+section {
+  margin-bottom: 50px;
+  margin-top: 10px;
+}
