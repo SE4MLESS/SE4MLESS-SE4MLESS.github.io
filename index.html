@@ -45,15 +45,21 @@
   </header>
 
   <article>
-    <div class="card w-96 mx-auto bg-white shadow-2xl hover:shadow">
-      <section>
-        <div class="w-1/4 text-left py-1 px-4 text-left font-normal text-lg bg-purple-500 text-white"><h1>Portfolio</h1>
+    <div class="card w-96 mx-auto bg-white shadow-2xl hover:shadow py-1">
+      <!--  
+      <div class="w-1/4 text-left py-1 px-4 text-left font-normal text-lg bg-purple-500 text-white"><h1>Portfolio</h1>
         </div>
+        -->
         <a href="https://seamcarving.github.io/">
-        <img class="w-48 mx-auto py-1 rounded-full -mt-30 border-8 border-white" src="source/face.jpg" alt="facepic">
+        <img class="w-48 mx-auto rounded-full -mt-30 border-8 border-white" src="source/face.jpg" alt="facepic">
         </a>
         <div class="text-center mt-2 text-3xl font-medium">Kitamura Kengo</div>
-        <div class="text-center mt-2 font-light text-sm py-1">@seamcarving</div>
+        <div class="text-center mt-2 font-light text-sm">@seamcarving</div>
+        <div class="px-6 text-center mt-2 font-light text-sm py-1">
+          <p>
+            My Portfolio
+          </p>
+        </div>
         <div class="flex flex-wrap justify-center gap-2">
           <ul class="follow-me">
             <li><a href="https://twitter.com/seamcarving"></a></li>
@@ -66,12 +72,10 @@
           </ul>
           </ul>
         </div>
-      </section>
-
+    <div class="mt-10 py-10 border-t border-blueGray-200 text-center">
       <section>
         <div class="w-2/4 text-right py-1 px-4 text-left font-normal text-lg bg-purple-500 text-white"><a id="profile"><h1>PROFILE</h1></a>
         </div>
-
         <div class="shadow overflow-hidden rounded border-b border-gray-200 px-2">
           <table class="min-w-full bg-white">
             <tr>
@@ -83,8 +87,16 @@
               <td class="w-1/3 text-left py-1 px-4">1995/02/11</td>
             </tr>
             <tr>
-              <th class="w-1/3 text-left py-1 px-4">Old</th>
+              <th class="w-1/3 text-left py-1 px-4">Birth Place</th>
+              <td class="w-1/3 text-left py-1 px-4">Shiga</td>
+            </tr>
+            <tr class="bg-gray-100">
+              <th class="w-1/3 text-left py-1 px-4">Age</th>
               <td class="w-1/3 text-left py-1 px-4">26</td>
+            </tr>
+            <tr>
+              <th class="w-1/3 text-left py-1 px-4">Blood Type</th>
+              <td class="w-1/3 text-left py-1 px-4">B</td>
             </tr>
             <tr class="bg-gray-100">
               <th class="w-1/3 text-left py-1 px-4">Gender</th>
@@ -97,40 +109,55 @@
             <tr class="bg-gray-100">
               <th class="w-1/3 text-left py-1 px-4">Education</th>
               <td class="w-1/3 text-left py-1 px-4 text-decoration: underline">
-                <a href="http://www.oit.ac.jp/is/graduate/index.html">OIT(大阪工業大学)</a>
+                <a href="http://www.oit.ac.jp/is/graduate/index.html">OIT</a>
               </td>
             </tr>
+            <tr>
+              <th class="w-1/3 text-left py-1 px-4">Motto</th>
+              <td class="w-1/3 text-left py-1 px-4">習慣は第二の天性なり
+              </td>
+            </tr>            
+            <tr class="bg-gray-100">
+              <th class="w-1/3 text-left py-1 px-4">Similar Animals</th>
+              <td class="w-1/3 text-left py-1 px-4">Hamster</td>
+            </tr>
+
           </table>
         </div>
       </section>
 
-
+    <div class="mt-10 py-10 border-t border-blueGray-200 text-center">
       <section>
         <div class="w-3/4 text-right py-1 px-4 text-left font-normal text-lg bg-purple-500 text-white"><a id="aboutme"><h1>About me</h1></a>
         </div>
-        <div class="overflow-auto h-48 bg-blueGray py-1 px-4 font-sans">
-          <strong>大学院</strong>では情報科学を専攻していました。<em><b>画像処理や物体検出、AIの技術に興味を持って取り組んでいました。</b></em>
-          <strong>SE就職後</strong>はデータのクレンジングやAIを用いた異常検知のPOC等に携わりました。技術の連携として<font size="4"><strong>Qiita</font>
-          </strong>の投稿も始めています。少しでも役立つ記事を目指しています。
-          <strong>趣味</strong>はPCの自作とFPS(一人称シューティング)です。特に最近は<font color="#ff0000">ApexLegends</font>
-          をプレイしていて<strike>2000時間以上</strike>は練習しています。何事にも一度興味を持つとモチベーションを維持できます。
+        <div class="overflow-auto h-64 bg-blueGray py-1 px-4 font-sans text-left">
+          &nbsp;&nbsp;大学、大学院では情報科学を専攻していました。<em><b>画像処理や物体検出、AIの技術に興味を持って取り組んでいました。
+            画像処理ではリサイズやアナログメータの数値測定をしていました。</b></em>プログラミング言語はC++、Python、Javaの経験があります。
+            <strong><br>&nbsp;&nbsp;SE就職後</strong>はAIで利用するデータのクレンジング（整形）やAIを用いた異常検知のPOC等に携わりました。また、ETLツールによるデータベース間のデータ連携等に携わりました。
+          gitやsvnの経験もあります。htmlやcssは業務で利用したことはなく趣味の範囲です。
+          技術連携として<font size="4"><strong>Qiita</font>
+          </strong>の投稿も始めています。少しでも役立つ記事を目指しています。<br>
+          &nbsp;&nbsp;<strong>趣味</strong>はPCの自作とFPS(一人称シューティング)です。特に最近は<strong><font color="#ff0000">ApexLegends</font></strong>
+          をプレイしていて<strike>2000時間以上</strike>は練習しています。<strong>何事にも一度興味を持つと高いモチベーションを維持できます。</strong>
         </div>
       </section>
 
+      <div class="mt-10 py-10 border-t -borderblueGray-200 text-center">
       <section>
         <div class=" w-4/4 text-right py-1 px-4 text-left font-normal text-lg bg-purple-500 text-white"><a id="skill"><h1>Skill Chart</h1></a>
         </div>
-        <br>
-        <div class="transform hover:scale-125">
+
+        <div class="transform hover:scale-125 py-4">
         <canvas id="skillChart" style="position: relative; height:150; width:150">
         </canvas>
         </div>
       </section>
+      </div>
 
+    <div class="mt-10 py-10 border-t border-blueGray-200 text-left">
       <section>
         <div class="w-1/4 text-left py-1 px-4 text-left font-normal text-lg bg-green-600 text-white"><a id="qiita"><h1>Qiita</h1></a>
         </div>
-
         <p class="py-1 px-3">
           <iframe src="https://hatenablog-parts.com/embed?url=https://qiita.com/seamcarving/"
             title="@seamcarvingのマイページ - Qiita" class="embed-card embed-webcard" scrolling="no" frameborder="0"
@@ -138,7 +165,7 @@
           </iframe>
         </p>
         <div class="container mx-auto px-4">
-          #タグ毎の投稿記事<br>機械学習データセット<br>
+          #タグ毎の投稿記事<br>機械学習データセット作成初級<br>
           #Python #Keras #機械学習
         </div>
         <p class="py-1 px-3">
@@ -148,10 +175,9 @@
             style="display: block; width: 100%; height: 155px; max-width: 600px; margin: 10px 0px;">
           </iframe>
         </p>
-
         </p class="py-1 px-3">
         <div class="container mx-auto px-4">
-          画像処理による工場のアナログメータの数値測定<br>
+          <strong>画像処理</strong>による工場のアナログメータの数値測定<br>
           #C++ #画像処理 #自動化
         </div>
         <p class="py-1 px-3">
@@ -160,8 +186,13 @@
             style="display: block; width: 100%; height: 155px; max-width: 600px; margin: 10px 0px;">
           </iframe>
         </p>
+        <div class="container mx-auto px-4">
+          etc...
+        </div>
       </section>
+    </div>
 
+    <div class="mt-10 py-10 border-t border-blueGray-200 text-left">
       <section>
         <div class="w-2/4 text-left py-1 px-4 text-left font-normal text-lg bg-red-800 text-white"><h1>ApexLegends</h1>
         </div>
@@ -169,23 +200,11 @@
         Battle record
         </div>
         <iframe title="Apex" src="https://apex.tracker.gg/apex/profile/origin/seamcarving/overview" width="384"
-          height="300">
+          height="350">
         </iframe>
       </section>
-
-      <footer>
-        <hr class="mt-8">
-        <div class="flex p-4">
-          <div class="w-1/2 text-center">
-            <span class="font-bold">Mail</span>
-          </div>
-          <div class="w-0 border border-gray-300">
-          </div>
-          <div class="w-1/2 text-center">
-            <span class="font-bold">-</span>
-          </div>
-        </div>
-      </footer>
+    </div>
+     
     </div>
   </article>
 
