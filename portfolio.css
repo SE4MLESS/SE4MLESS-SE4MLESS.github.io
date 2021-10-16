@@ -41,6 +41,11 @@
   background-color: #55acee;
   content: "\f099";
 }
+.follow-me li a[href*="youtube.com/channel/UCRp-zREgYAaY8U6I23uNVYQ"]::before {
+  border-color: #cd201f;
+  background-color: #cd201f;
+  content: "\f16a";
+}
 
 .follow-me li a:hover::before {
   background-color: #fff;
